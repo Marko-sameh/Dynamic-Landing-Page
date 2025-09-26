@@ -1,0 +1,11 @@
+{
+  "logo": "light-logo.png",
+  "hero": "baner.png",
+  "about": "2.webp",
+  "whyUs": "6.webp",
+  "portfolio": [
+    {"before":"2.webp", "after":"1.webp", "desc":"ترميم واجهة خارجية"},
+    {"before":"6.webp", "after":"3.webp", "desc":"تشطيب داخلي فاخر"},
+    {"before":"5.jpg", "after":"4.webp", "desc":"إعادة تأهيل حمام"}
+  ]
+}

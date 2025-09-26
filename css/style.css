@@ -1,0 +1,578 @@
+/* .colors {
+        color: #fefefe;
+        color: #d1a546;
+        color: #181d27;
+      } */
+
+/* إعدادات عامة */
+body {
+  background: #181d27 !important; /* خلفية غامقة */
+  color: #fefefe !important; /* النص أبيض */
+  font-family: Tahoma, Arial, Verdana, "Times New Roman", sans-serif;
+  transition: 0.3s ease;
+}
+
+/* العناصر الأساسية */
+.navbar,
+.card,
+footer,
+.modal-content {
+  background: #181d27 !important; /* نفس خلفية الموقع */
+  color: #fefefe !important;
+  border: none !important;
+}
+#top {
+  margin-top: 3rem;
+}
+
+/* الأزرار */
+.btn-primary,
+.bg-primary {
+  background-color: #d1a546 !important;
+  border-color: #d1a546 !important;
+  color: #181d27 !important; /* النص غامق على ذهبي */
+}
+.btn-primary:hover {
+  background-color: #b68c2e !important;
+  transform: scale(0.98);
+}
+
+.btn-secondary,
+.bg-secondary {
+  background-color: #fefefe !important;
+  border-color: #fefefe !important;
+  color: #181d27 !important; /* عكسي */
+}
+.btn-secondary:hover {
+  background-color: #dcdcdc !important;
+  transform: scale(0.98);
+}
+
+/* زر التحذير أو CTA */
+.btn-warning {
+  background-color: #d1a546 !important;
+  border-color: #d1a546 !important;
+  color: #181d27 !important;
+}
+.btn-warning:hover {
+  background-color: #b68c2e !important;
+  transform: scale(1.02);
+}
+
+/* البادجات */
+.badge-custom {
+  background-color: #d1a546;
+  color: #181d27;
+  font-size: 0.9rem;
+  padding: 0.4em 0.9em;
+  border-radius: 0.5rem;
+}
+
+/* أقسام KPI */
+.kpi {
+  background: #fefefe;
+  border-radius: 0.7rem;
+  padding: 0.7rem;
+  text-align: center;
+  color: #181d27;
+  font-weight: bold;
+  box-shadow: 0 0.01rem 1rem rgba(255, 255, 255, 0.59);
+  /* 0 0.5rem 1rem rgba(0, 0, 0, 0.15) */
+}
+
+/* الحواف */
+.rounded-4 {
+  border-radius: 1.5rem !important;
+}
+.rounded-3 {
+  border-radius: 1rem !important;
+}
+
+/* الحقول */
+input,
+select,
+textarea {
+  background: #fefefe !important;
+  border-radius: 0.75rem !important;
+  padding-left: 1rem;
+  color: #181d27 !important;
+  border: 1px solid #d1a546 !important;
+}
+label {
+  color: #d1a546 !important;
+  font-weight: 500;
+}
+
+/* النصوص الصغيرة */
+.small,
+.form-text {
+  font-size: 12px !important;
+  color: #d1a546 !important;
+}
+
+/* باقي الأكواد (responsive + تحسينات) نفس اللي عندك من غير ما نغيّر إلا الألوان */
+
+/* الزر العائم */
+.whatsapp-fab {
+  z-index: 1051;
+}
+/* modal fix */
+.modal-backdrop.show {
+  opacity: 0.4 !important;
+}
+
+/* === Responsive Improvements === */
+
+/* تحسينات عامة للموبايل */
+@media (max-width: 767px) {
+  #top {
+    margin-top: 3rem;
+  }
+  body {
+    font-size: 14px;
+    justify-content: center !important;
+    text-align: center;
+    margin: 0 0.2rem;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* تحسين الهوامش والحشو */
+  .py-5 {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  .py-4 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  /* تحسين العناوين */
+  h1 {
+    font-size: 1.75rem !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* تحسين الأزرار */
+  .btn {
+    font-size: 14px !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* تحسين البطاقات */
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  /* تحسين KPI boxes */
+  .kpi {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  /* تحسين النماذج */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important; /* منع التكبير في iOS */
+  }
+
+  /* تحسين الشريط الإعلاني */
+  #offer-strip {
+    padding: 1rem !important;
+    text-align: center;
+  }
+
+  #offer-strip strong {
+    font-size: 1rem !important;
+  }
+
+  /* تحسين الأزرار العائمة */
+  .whatsapp-fab {
+    margin: 0.75rem !important;
+    font-size: 0.875rem !important;
+    padding: 0.5rem 1rem !important;
+  }
+
+  /* إخفاء زر واحد على الموبايل */
+  .whatsapp-fab:nth-of-type(2) {
+    display: none !important;
+  }
+}
+
+/* تحسينات للأجهزة اللوحية */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+  }
+  h2 {
+    font-size: 1.75rem !important;
+  }
+
+  .btn {
+    padding: 0.5rem 1.5rem !important;
+  }
+}
+
+/* تحسينات للشاشات الصغيرة جداً */
+@media (max-width: 575px) {
+  /* تحسين navbar */
+  .navbar-brand span {
+    font-size: 0.9rem !important;
+  }
+
+  .navbar-brand img {
+    width: 35px !important;
+    height: 35px !important;
+  }
+
+  /* تحسين البطاقات */
+  .card-body {
+    padding: 1rem !important;
+  }
+
+  /* تحسين الصور */
+  .rounded-4 {
+    border-radius: 1rem !important;
+  }
+
+  .rounded-3 {
+    border-radius: 0.75rem !important;
+  }
+
+  /* تحسين footer */
+  footer .row > div {
+    text-align: center !important;
+    margin-bottom: 1.5rem;
+  }
+
+  footer h3 {
+    font-size: 1.25rem !important;
+  }
+
+  footer h6 {
+    font-size: 1rem !important;
+  }
+
+  /* تحسين modal */
+  .modal-dialog {
+    margin: 1rem;
+  }
+
+  .modal-content {
+    border-radius: 1rem !important;
+  }
+}
+
+/* تحسينات للشاشات الكبيرة */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+/* تحسينات خاصة بالاتجاه الأفقي للموبايل */
+@media (max-height: 500px) and (orientation: landscape) {
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .whatsapp-fab {
+    bottom: 0.5rem !important;
+    margin: 0.5rem !important;
+  }
+}
+
+/* تحسينات للطباعة */
+@media print {
+  .navbar,
+  .whatsapp-fab,
+  #offer-strip {
+    display: none !important;
+  }
+
+  .card {
+    border: 1px solid #fefefe !important;
+    box-shadow: none !important;
+  }
+}
+
+/* تحسينات إضافية للتوافقية */
+/* تحسين المرونة للصور */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* تحسين التفاف النصوص */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* تحسين الجداول إذا وُجدت */
+table {
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* تحسين القوائم */
+ul,
+ol {
+  padding-right: 1.5rem;
+}
+
+/* تحسين العناصر المرنة */
+.d-flex {
+  flex-wrap: wrap;
+}
+
+/* تحسين التمرير الأفقي */
+.overflow-x-auto {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* تحسين التمرير للعناصر الطويلة */
+.container-fluid {
+  overflow-x: hidden;
+}
+
+/* تحسينات خاصة بالنماذج */
+@media (max-width: 575px) {
+  /* جعل حقول النموذج بعرض كامل على الموبايل */
+  .row.g-2 > [class*="col-"] {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* تحسين أزرار النموذج */
+  #quoteForm .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+
+  /* تحسين معاينة الصور */
+  #preview img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+  }
+}
+
+/* تحسينات للبطاقات والشبكة */
+@media (max-width: 767px) {
+  /* جعل البطاقات بعرض كامل */
+  .row > [class*="col-"] {
+    margin-bottom: 1rem;
+  }
+
+  /* تحسين المسافات بين العناصر */
+  .g-4 {
+    --bs-gutter-y: 1.5rem !important;
+    --bs-gutter-x: 0 !important;
+  }
+
+  /* تحسين البادجات */
+  .badge-custom {
+    font-size: 0.8rem !important;
+    padding: 0.4em 0.8em !important;
+  }
+}
+
+/* تحسينات خاصة بالنص العربي */
+@media (max-width: 767px) {
+  /* تحسين المحاذاة للنص العربي */
+  body {
+    text-align: right !important;
+    direction: rtl !important;
+  }
+
+  /* تحسين القوائم العربية */
+  ul,
+  ol {
+    padding-right: 1.25rem !important;
+    padding-left: 0 !important;
+  }
+}
+
+/* تحسينات للأداء */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* دعم الوضع الداكن (اختياري) */
+@media (prefers-color-scheme: dark) {
+  /* يمكنك إضافة أنماط الوضع الداكن هنا إذا أردت */
+}
+
+/* تحسينات نهائية للتأكد من التوافقية */
+* {
+  box-sizing: border-box;
+}
+
+/* منع التمرير الأفقي غير المرغوب */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* تحسين الروابط للمس على الموبايل */
+a,
+button {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* تحسين مناطق اللمس للموبايل */
+@media (max-width: 767px) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* تحسين المسافات بين الروابط */
+  .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+  }
+}
+
+/* تحسينات إضافية للتوافقية مع Safari */
+@supports (-webkit-touch-callout: none) {
+  /* إصلاحات خاصة بـ Safari iOS */
+  input,
+  textarea,
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  /* إصلاح مشكلة الـ sticky position */
+  .sticky-top {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+/* تحسينات للشاشات عالية الدقة */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* تحسين حدة الصور والأيقونات */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* تحسينات نهائية للأزرار العائمة */
+@media (max-width: 575px) {
+  /* ترتيب الأزرار العائمة بشكل عمودي */
+  .whatsapp-fab:first-of-type {
+    bottom: 4rem !important;
+  }
+
+  .whatsapp-fab:last-of-type {
+    bottom: 0 !important;
+  }
+
+  /* إظهار كلا الزرين على الموبايل */
+  .whatsapp-fab:nth-of-type(2) {
+    display: flex !important;
+  }
+}
+
+/* تحسين القابلية للقراءة */
+@media (max-width: 767px) {
+  p,
+  li {
+    line-height: 1.7;
+  }
+
+  /* تحسين التباين للنصوص الصغيرة */
+  .text-muted {
+    color: #181d27 !important;
+  }
+
+  .small,
+  .form-text {
+    font-size: 0.875rem !important;
+  }
+}
+
+/* إصلاحات أخيرة للتأكد من عمل كل شيء */
+.container-fluid,
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* التأكد من عدم تجاوز العناصر حدود الشاشة */
+* {
+  max-width: 100%;
+}
+
+/* نهاية التحسينات الresponsive */
+
+/* تحسين سرعة التحميل */
+@media (max-width: 767px) {
+  /* تقليل حجم الصور على الموبايل */
+  img {
+    content-visibility: auto;
+  }
+
+  /* تحسين الأداء للعناصر الثقيلة */
+  .card {
+    will-change: transform;
+  }
+}
+
+/* دعم اللمس السلس */
+@media (pointer: coarse) {
+  /* للأجهزة التي تعمل باللمس */
+  .btn,
+  a {
+    padding: 0.75rem 1.25rem !important;
+  }
+}
