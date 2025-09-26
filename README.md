@@ -238,17 +238,6 @@ Add this code before the closing `</head>` tag:
 4. Test on multiple devices
 5. Submit a pull request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-For questions or support:
-- **Email**: nayzakest@gmail.com
-- **WhatsApp**: +966549228052
-- **Website**: neizak.sa
-
 ---
 
 **Built for Nizek Contracting Foundation**
